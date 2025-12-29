@@ -1,77 +1,122 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Buffet Thịt Nướng Đức</title>
+<meta charset="UTF-8">
+<title>Buffet Thịt Nướng Đức</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial;
+    background: #111;
+    color: #fff;
+}
 
-        header {
-            background: linear-gradient(to right, #b71c1c, #000);
-            padding: 20px;
-            text-align: center;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #b71c1c, #000);
+    text-align: center;
+    padding: 25px;
+}
 
-        header img {
-            width: 220px;
-            margin-bottom: 10px;
-        }
+header img {
+    width: 200px;
+    animation: zoom 2s infinite alternate;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #ffcc80;
-        }
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
 
-        .banner {
-            background-image: url("https://images.unsplash.com/photo-1604908177522-4026c68e6c36");
-            background-size: cover;
-            background-position: center;
-            height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+header h1 {
+    color: #ffcc80;
+    margin: 10px 0 5px;
+}
 
-        .banner h2 {
-            background: rgba(0,0,0,0.6);
-            padding: 15px;
-            border-radius: 10px;
-            color: #ffd54f;
-        }
+header p {
+    color: #ffd180;
+    font-style: italic;
+}
 
-        section {
-            padding: 40px;
-            text-align: center;
-        }
+/* BANNER */
+.banner {
+    background-image: url("https://images.unsplash.com/photo-1553163147-622ab57be1c7");
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .menu {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+.banner h2 {
+    background: rgba(0,0,0,0.6);
+    padding: 20px 30px;
+    border-radius: 12px;
+    color: #ffeb3b;
+    font-size: 30px;
+}
 
-        .menu-item {
-            background-color: #2a2a2a;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-        }
+/* SECTION */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        footer {
-            background: black;
-            padding: 15px;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+section h2 {
+    color: #ff7043;
+    margin-bottom: 20px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background: #222;
+    border-radius: 15px;
+    width: 260px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff5722;
+}
+
+.menu-item h3 {
+    color: #ffab91;
+}
+
+/* BUTTON */
+button {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
@@ -83,28 +128,45 @@
 </header>
 
 <div class="banner">
-    <h2>Ăn là ghiền – Nướng là mê</h2>
+    <h2>🔥 Ăn là ghiền – Nướng là mê 🔥</h2>
 </div>
 
 <section>
     <h2>Giới thiệu</h2>
     <p>
-        Buffet thịt nướng phong cách Hàn Quốc kết hợp hương vị Việt Nam,  
-        buffet không giới hạn – phù hợp gia đình và bạn bè.
+        Buffet thịt nướng đậm chất Hàn Quốc kết hợp hương vị Việt Nam,
+        thịt tươi – sốt độc quyền – không giới hạn.
     </p>
 </section>
 
 <section>
     <h2>Menu nổi bật</h2>
     <div class="menu">
-        <div class="menu-item">🥩 Ba chỉ bò Mỹ</div>
-        <div class="menu-item">🍖 Sườn nướng sốt đặc biệt</div>
-        <div class="menu-item">🦐 Hải sản nướng</div>
+        <div class="menu-item">
+            <h3>🥩 Ba chỉ bò Mỹ</h3>
+            <p>Ướp sốt cay ngọt đặc trưng</p>
+        </div>
+        <div class="menu-item">
+            <h3>🍖 Sườn heo nướng</h3>
+            <p>Mềm – thơm – đậm vị</p>
+        </div>
+        <div class="menu-item">
+            <h3>🦐 Hải sản nướng</h3>
+            <p>Tôm – mực – sò tươi sống</p>
+        </div>
     </div>
 </section>
 
+<section>
+    <h2>Đặt bàn ngay</h2>
+    <p>Hotline: 090x xxx xxx</p>
+    <button onclick="alert('Chức năng đặt bàn sẽ được mở sớm 😊')">
+        ĐẶT BÀN NGAY
+    </button>
+</section>
+
 <footer>
-    © 2025 Buffet Thịt Nướng Đức
+    © 2025 Buffet Thịt Nướng Đức | Chủ quán: Nguyễn Duy Đức
 </footer>
 
 </body>
